@@ -9,13 +9,26 @@
         $stateProvider
         
             .state('landing', {
-              url: '/',
-              templateUrl: '/templates/landing.html'
+              views: {
+                  "": {
+                      url: '/',
+                      templateUrl: '/templates/landing.html'
+                  },
+                  "test": {
+                    template:"<h1>This shows multiple views within the single state 'landing'</h1>"
+                  }
+              }
+              
             })
         
             .state('album', {
               url: '/album',
               templateUrl: '/templates/album.html'
+            })
+        
+            .state('collection', {
+              url:  '/collection',
+              templateUrl: '/templates/collection.html'
             });
     }
     angular
