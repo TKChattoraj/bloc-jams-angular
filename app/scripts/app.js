@@ -32,6 +32,13 @@
               url:  '/collection',
               controller:  'CollectionCtrl as collection',
               templateUrl: '/templates/collection.html'
+            })
+        
+            .state('score', {
+                url:  '/score',
+                controller: 'ScoreCtrl as score',
+                templateUrl: '/templates/score.html'
+                
             });
     }
     angular
