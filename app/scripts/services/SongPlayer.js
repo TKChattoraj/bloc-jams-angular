@@ -171,7 +171,12 @@
         
         
         return SongPlayer;
-        
+//        return {
+//            "play": play,
+//            "pause": pause,
+//            "currentSong": currentSong
+//        }
+//        
     }
     
     angular
