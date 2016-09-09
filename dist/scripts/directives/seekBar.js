@@ -34,7 +34,7 @@
                 
                 attributes.$observe('max', function(newValue) {
                     scope.max= newValue;
-                })
+                });
                 
                 var percentString = function() {
                     var value = scope.value;
@@ -49,7 +49,7 @@
                 
                 scope.thumbStyle = function() {
                     return{left: percentString()};
-                }
+                };
                 
                 scope.onClickSeekBar = function(event) {
                     var percent = calculatePercent(seekBar, event);
@@ -67,22 +67,29 @@
                         });
                         
                     });
-                        
-                };
-                    
-                var notifyOnChange = function(newValue) {
-                        if (typeof scope.onChange === 'function') {
-                            scope.onChange({value: newValue});
-                        };
                     
                     $document.bind('mouseup.thumb', function() {
                         $document.unbind('mousemove.thumb');
                         $document.unbind('mouseup.thumb');
                     });
+                        
                 };
+                
+                var notifyOnChange = function(newValue) {
+                        if (typeof scope.onChange === 'function') {
+                            scope.onChange({value: newValue});
+                        }
+                };              
             }
         };
     }
+    
+    
+    
+    
+    
+    
+    
     
     angular
         .module('blocJams')
