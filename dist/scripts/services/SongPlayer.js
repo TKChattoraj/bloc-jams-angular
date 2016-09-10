@@ -45,7 +45,8 @@
             });
             
             currentBuzzObject.bind('timeupdate', function() {
-                $rootScope.$apply(function() {
+                //$rootScope.$apply(function() {
+                $apply(function() {
                     SongPlayer.currentTime = currentBuzzObject.getTime();
                 });
             });
