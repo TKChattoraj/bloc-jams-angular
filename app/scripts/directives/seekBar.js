@@ -8,7 +8,7 @@
             var seekBarWidth = seekBar.width();
             var offsetXPercent = offsetX /seekBarWidth;
             offsetXPercent = Math.max(0, offsetXPercent);
-            offsetXPercent - Math.min(1, offsetXPercent);
+            offsetXPercent = Math.min(1, offsetXPercent);
             return offsetXPercent;
         };
         
@@ -39,7 +39,9 @@
                 var percentString = function() {
                     var value = scope.value;
                     var max = scope.max;
+                    
                     var percent = value/ max *100;
+    
                     return percent +"%";
                     
                 };
