@@ -47,10 +47,12 @@
             currentBuzzObject.bind('timeupdate', function() {
                 $rootScope.$apply(function() {
                     SongPlayer.currentTime = currentBuzzObject.getTime();
+                    SongPlayer.timer = buzz.toTimer(currentBuzzObject.getTime());
                 });
             });
             
-            SongPlayer.currentSong = song;          
+            SongPlayer.currentSong = song;
+            SongPlayer.songDurationTimer = buzz.toTimer(song.duration); 
         };
         
         /**
@@ -74,6 +76,11 @@
             currentBuzzObject.stop();
             song.playing = null;
         };
+        
+        var pauseSong = function(song) {
+            currentBuzzObject.pause();
+            song.playing = null;
+        }
              
         /**
         * @function getSongIndex
@@ -102,11 +109,12 @@
         */
         
         SongPlayer.currentTime = null;
+        SongPlayer.timer = null;
         
         /*
         * @function SongPlayer.play
         * @desc public function that calls private functions setSong and playSong
-        * @params song to be set and played.  The song is from the collection of songs and is specify by clicking on its corresponding play button.
+        * @params song to be set and played.  The song is from the collection of songs and is specified by clicking on its corresponding play button.
         */
         
         SongPlayer.play = function(song) {
@@ -134,7 +142,7 @@
         SongPlayer.pause = function(song) {
             song = song || SongPlayer.currentSong;
             if (song.playing) {
-                stopSong(song);          
+                pauseSong(song);          
             }
             
         };
@@ -199,6 +207,10 @@
             }
         };
         
+        SongPlayer.albumTimer = function(song) {
+            var timer = buzz.toTimer(song.duration);
+            return timer;
+        }
         
         
         
