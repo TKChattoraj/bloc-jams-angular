@@ -1,6 +1,6 @@
 (function() {
     
-    function seekBar($document) {
+    function seekBar($document, BuzzWrapper) {
         
         var calculatePercent = function(seekBar, event) {
             
@@ -95,6 +95,6 @@
     
     angular
         .module('blocJams')
-        .directive('seekBar', ['$document', seekBar]);
+        .directive('seekBar', ['$document', 'BuzzWrapper', seekBar]);
     
 })();

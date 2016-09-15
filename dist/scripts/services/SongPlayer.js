@@ -52,7 +52,15 @@
 //                });
 //            });
             
-             BuzzWrapper.updateTime(currentBuzzObject);
+            currentBuzzObject.bind('timeupdate', function(){
+                
+                    SongPlayer.currentTime = BuzzWrapper.updateTime(currentBuzzObject);
+                console.log ("SongPlayer: " + SongPlayer.currentTime);
+                
+    
+            });
+            
+            console.log("SongPlayer outside of the listener:  " + SongPlayer.currentTime);
             
             SongPlayer.currentSong = song;          
         };

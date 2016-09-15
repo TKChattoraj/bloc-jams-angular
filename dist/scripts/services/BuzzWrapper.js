@@ -12,11 +12,10 @@
        };
         
        BuzzWrapper.updateTime = function(currentBuzzObject) {
-           currentBuzzObject.bind('timeupdate', function(){
-               BuzzWrapper.currentTime = currentBuzzObject.getTime();
-               console.log(BuzzWrapper.currentTime);
-           })
-       }
+           console.log(currentBuzzObject.getTime());
+           return currentBuzzObject.getTime();
+               
+           };
     
     
     return BuzzWrapper;
