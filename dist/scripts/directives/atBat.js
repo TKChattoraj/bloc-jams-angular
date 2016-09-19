@@ -7,14 +7,15 @@
             restrict: 'E',
             scope: {},
             link: function(scope, element, attributes) {
+                scope.background = "grey";
                 var firstClick = null;
                 var secondClick = null;
-                var toFirst = false;
-                var toSecond = false;
-                var toThird = false;
-                var advFrmFirst = false;
-                var advFrmSecond = false;
-                var advFrmThird = false;
+                scope.toFirst = false;
+                scope.toSecond = false;
+                scope.toThird = false;
+                scope.advFrmFirst = false;
+                scope.advFrmSecond = false;
+                scope.advFrmThird = false;
                 scope.updateBasePath = function(e) {
                     if (firstClick === null) {
                         
@@ -44,9 +45,55 @@
                                 scope.toSecond = true;
                                 scope.toThird = true;
                                 scope.toHome = true;
+                                scope.background = 'blue';
+                        }
+                    } else if (firstClick === 'first-base')  {
+                        console.log(firstClick + " " + secondClick);
+                        switch (secondClick) {
+                            case 'second-base':
+                                scope.advFrmFirst = true;
+                                console.log(scope.advFrmFirst);
+                                break;
+                            case 'third-base':
+                                scope.advFrmFirst = true;
+                                break;
+                            scope.toThird = true;
+                                break;
+                            case 'home-plate':
+                                scope.advFrmFirst = true;
+                                scope.toThird = true;
+                                scope.toHome = true;
+                                scope.background = 'blue';
+                                break;
+                        }
+                     } else if (firstClick === 'second-base') {
+                        console.log(firstClick + " " + secondClick);
+                        switch (secondClick) {
+                            case 'third-base':
+                                scope.advFrmSecond = true;
+                                break;
+                            case 'home-plate':
+                                scope.advFrmSecond = true;
+                                scope.toHome = true;
+                                scope.background = 'blue';
+                                break;
+                        }
+                    } else if (firstClick === 'third-base') {
+                    console.log(firstClick + " " + secondClick);
+                        switch (secondClick) {
+                            case 'home-plate':
+                                scope.advFrmThird = true;
+                                scope.background = 'blue';
+                                break;
                         }
                     }
-                };
+                    if (secondClick) {
+                        firstClick = secondClick;
+                        console.log('firstClick is now: ' + firstClick);
+                    }
+
+                    };
+                }
                         
 //                        if (secondClick === 'first-base') {
 //                            
@@ -73,11 +120,9 @@
 //                    
 //                };
                 
-            }
-        };
+            };
+        }
         
-        
-    }
     
     angular
         .module('blocJams')

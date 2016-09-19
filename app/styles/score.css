@@ -56,7 +56,6 @@ div.outs {
 div .field {
     width: 90px;
     height: 90px;
-    background-color: grey;
     position: absolute;
     top: 20px;
     left: 20px;
@@ -118,7 +117,7 @@ div .first .to-first {
     top: 0%;
     right: 0%;
     background-color: black;
-    visibility: visible;
+    
 }
 
 div .second .to-second {
@@ -128,7 +127,7 @@ div .second .to-second {
     top: 0%;
     left: 0%;
     background-color: black;
-    visibility: visible; 
+     
 }
 
 div .second .advance-from-first {
@@ -138,7 +137,7 @@ div .second .advance-from-first {
     top: 0%;
     left: 0%;
     background-color: red;
-    visibility: hidden; 
+     
 }
 
 div .third .to-third {
@@ -148,7 +147,7 @@ div .third .to-third {
     top: 0%;
     left: 0%;
     background-color: black;
-    visibility: visible; 
+     
 }
 
 div .third .advance-from-second {
@@ -158,7 +157,7 @@ div .third .advance-from-second {
     top: 25%;
     left: 0%;
     background-color: red;
-    visibility: hidden; 
+     
 }
 
 div .home .to-home {
@@ -168,7 +167,7 @@ div .home .to-home {
     bottom: 0%;
     left: 0%;
     background-color: black;
-    visibility: visible; 
+     
 }
 
 div .home .advance-from-third {
@@ -176,9 +175,9 @@ div .home .advance-from-third {
     height: 5%;
     position: absolute;
     bottom: 0%;
-    left: 20%;
+    left: 25%;
     background-color: red;
-    visibility: hidden; 
+     
 }
 
 
