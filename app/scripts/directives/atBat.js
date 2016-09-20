@@ -56,8 +56,7 @@
                                 break;
                             case 'third-base':
                                 scope.advFrmFirst = true;
-                                break;
-                            scope.toThird = true;
+                                scope.toThird = true;
                                 break;
                             case 'home-plate':
                                 scope.advFrmFirst = true;
