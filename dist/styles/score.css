@@ -53,6 +53,10 @@ div.outs {
    border-radius:  11px;
 }
 
+div .outs .out {
+    background-color: black;
+}
+
 div .field {
     width: 90px;
     height: 90px;
@@ -109,7 +113,7 @@ div .field .third-base {
 
 
 
-div .first .to-first {
+div .to-first {
     
     width: 5%;
     height: 100%;
@@ -120,7 +124,7 @@ div .first .to-first {
     
 }
 
-div .second .to-second {
+div .to-second {
     width: 100%;
     height: 5%;
     position: absolute;
@@ -130,7 +134,7 @@ div .second .to-second {
      
 }
 
-div .second .advance-from-first {
+div .advance-from-first {
     width: 75%;
     height: 5%;
     position: absolute;
@@ -140,7 +144,7 @@ div .second .advance-from-first {
      
 }
 
-div .third .to-third {
+div .to-third {
     width: 5%;
     height: 100%;
     position: absolute;
@@ -150,7 +154,7 @@ div .third .to-third {
      
 }
 
-div .third .advance-from-second {
+div .advance-from-second {
     width: 5%;
     height: 75%;
     position: absolute;
@@ -160,7 +164,7 @@ div .third .advance-from-second {
      
 }
 
-div .home .to-home {
+div .to-home {
     width: 100%;
     height: 5%;
     position: absolute;
@@ -170,7 +174,7 @@ div .home .to-home {
      
 }
 
-div .home .advance-from-third {
+div .advance-from-third {
     width: 75%;
     height: 5%;
     position: absolute;
@@ -179,12 +183,6 @@ div .home .advance-from-third {
     background-color: red;
      
 }
-
-
-
-
-
-
 
 
 div#double {

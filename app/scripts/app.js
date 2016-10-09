@@ -42,6 +42,6 @@
             });
     }
     angular
-        .module('blocJams', ['ui.router'])
+        .module('blocJams', ['ui.router', 'scoreMod'])
         .config(config);
 })();

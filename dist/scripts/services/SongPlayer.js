@@ -214,7 +214,7 @@
     
     angular
         .module('blocJams')
-        .factory('SongPlayer', ['$rootScope', 'Fixtures', SongPlayer])
+        .factory('SongPlayer', ['$rootScope', 'Fixtures', SongPlayer]);
     
     
     
